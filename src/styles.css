@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    *,*::after, *::before{
+        @apply p-0 m-0 box-border
+    }
+    body{
+        @apply w-full h-full box-border
+    }
+}
+
+@layer components{
+    .image-container img{
+        @apply hidden
+    }
+    .image-container img.active{
+        @apply block
+    }
+    .navlinks ul li.active{
+        @apply font-bold
+    }
+    .thumbnail-container.active{
+        @apply border-2 border-orange rounded-xl
+    }
+    .thumbnail-container.active img{
+        @apply opacity-40
+    }
+    
+    .thumbnail-img{
+        @apply rounded-xl w-[62px] h-[62px]  cursor-pointer
+    }
+    
+    @media screen and (max-width:768px) {
+        .navlinks{
+            @apply  left-0 top-0 h-screen w-full z-10 hidden
+        }
+        .navlinks ul {
+            @apply bg-white flex flex-col items-start pt-20 font-bold absolute pl-5
+        }
+        .show{
+            @apply block
+        }
+        .hide{
+            @apply hidden
+        }
+        .previous,
+        .next{
+           @apply rounded-full bg-white w-8 h-8 md:hidden absolute -translate-y-1/2  top-1/2 flex items-center justify-center p-[11px]
+        }
+    }
+    
+}
