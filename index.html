@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="./dist/output.css">
     <title>Document</title>
 </head>
 <body>
     <div class=" flex relative flex-col mx-auto  wrapper  min-h-screen px:0 md:px-12 lg:px-32 ">
         <nav class="fixed w-full md:w-4/5 left-1/2 -translate-x-1/2 z-10 bg-white flex px-5 md:px-0 justify-between items-center h-20 border-b border-[gainsboro] ">
             <div class="toggler flex md:hidden mr-5">
-                <img src="../images/icon-menu.svg" data-menu-img alt="icon-menu"  class="w-4 object-contain cursor-pointer"/>
+                <img src="./images/icon-menu.svg" data-menu-img alt="icon-menu"  class="w-4 object-contain cursor-pointer"/>
             </div>
             <div class="flex flex-1 items-center h-full " >
-                <img src="../images/logo.svg"  alt="logo" class="w-24 object-contain mr-4 md:mr-12">
+                <img src="./images/logo.svg"  alt="logo" class="w-24 object-contain mr-4 md:mr-12">
                 <div class="navlinks fixed md:static" data-navlinks >
                     <div class="overlay w-full h-full bg-[rgba(0,0,0,.7)]"></div>
-                    <img src="../images/icon-close.svg" alt="icon-close" data-close-img  class=" left-5 top-8 absolute  close w-4 md:hidden z-20 object-contain cursor-pointer"/>
+                    <img src="./images/icon-close.svg" alt="icon-close" data-close-img  class=" left-5 top-8 absolute  close w-4 md:hidden z-20 object-contain cursor-pointer"/>
                     <ul class="flex h-full items-center top-0 left-0 w-4/5 z-10 ">
                         <li class="active mr-5 h-10 md:h-full flex items-center rounded-sm hover:text-black hover:border-b-[3px] hover:border-orange cursor-pointer text-slate-800">Collections</li>
                         <li class="mr-5 h-10 md:h-full flex items-center rounded-sm hover:text-black hover:border-b-[3px] hover:border-orange cursor-pointer text-slate-800">Men</li>
@@ -33,7 +32,7 @@
                     <div data-cart-item-count class="absolute w-4 h-4 rounded-full text-xs right-[77px] top-[26%] md:-top-2 md:left-3 text-white hidden items-center justify-center bg-orange ">
                         <span  class="-mt-[2px] -mr-[1px]" >0</span>
                     </div>
-                    <img src="../images/icon-cart.svg" alt="cart" class="w-7  object-contain cursor-pointer" >
+                    <img src="./images/icon-cart.svg" alt="cart" class="w-7  object-contain cursor-pointer" >
                     <div class="hidden bg-white cart group-hover:flex flex-col rounded-md drop-shadow-xl w-[96%] left-1/2 -translate-x-1/2 md:w-[300px] absolute md:-left-[100px] top-[110%] md:top-[120%]" >
                         <h1 class="shadow-sm py-4 px-3 text-sm font-bold">Cart</h1>
                         <div data-cart-items-container class="flex flex-col gap-4 items-center justify-center min-h-[150px]  p-5">
@@ -45,44 +44,44 @@
                         <template data-cart-item-template  >
                             <div class="cart-item w-full flex gap-4 justify-between items-center">
                                 <div class="left flex flex-1 gap-3 items-center" >
-                                    <img class="w-10 rounded-md object-contain" src="../images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail" />
+                                    <img class="w-10 rounded-md object-contain" src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail" />
                                     <div class="flex flex-col">
                                         <p class="text-sm">Fall Limited Edition Sneakers</p>
                                         <p class="price text-sm ">$125 x <span class="ml-1" data-quantity>1</span> <span data-total class="ml-3 font-bold">$375.00</span></p>
                                     </div>
                                 </div>
                                 <div class="right" >
-                                    <img data-delete-icon class="w-4 object-contain cursor-pointer" src="../images/icon-delete.svg" alt="icon-delete">
+                                    <img data-delete-icon class="w-4 object-contain cursor-pointer" src="./images/icon-delete.svg" alt="icon-delete">
                                 </div>
                             </div>
                         </template>
                     </div>
                 </div>
-                <img src="../images/image-avatar.png" alt="avatar" class="w-10 ml-5 object-contain cursor-pointer">
+                <img src="./images/image-avatar.png" alt="avatar" class="w-10 ml-5 object-contain cursor-pointer">
             </div>
         </nav>
         <main class="flex-1 flex flex-col md:flex-row items-center mt-20  mb-10 md:my-10 justify-center md:gap-10 lg:gap-20">
             <div class=" flex flex-col w-full md:w-auto">
                 <div data-image-container class="image-container mb-10 w-full relative md:w-auto">
-                    <div data-previous-btn class="previous rounded-full bg-white w-8 h-8 md:hidden absolute top-1/2 left-3"><img  class= '!block' src="../images/icon-previous.svg" alt="previous"></div>
-                    <div data-next-btn class="next rounded-full bg-white w-8 h-8 md:hidden absolute top-1/2 right-3"><img class= '!block'  src="../images/icon-next.svg" alt="next"></div>
-                    <img src="../images/image-product-1.jpg" alt="image-product-1" class="active object-cover object-center w-full md:w-72 max-h-80 h-auto  md:rounded-xl" />
-                    <img src="../images/image-product-2.jpg" alt="image-product-2" class="object-cover object-center w-full md:w-72 max-h-80 h-auto  md:rounded-xl" />
-                    <img src="../images/image-product-3.jpg" alt="image-product-3" class="object-cover object-center w-full md:w-72 max-h-80 h-auto  md:rounded-xl" />
-                    <img src="../images/image-product-4.jpg" alt="image-product-4" class="object-cover object-center w-full md:w-72 max-h-80 h-auto  md:rounded-xl" />
+                    <div data-previous-btn class="previous rounded-full bg-white w-8 h-8 md:hidden absolute top-1/2 left-3"><img  class= '!block' src="./images/icon-previous.svg" alt="previous"></div>
+                    <div data-next-btn class="next rounded-full bg-white w-8 h-8 md:hidden absolute top-1/2 right-3"><img class= '!block'  src="./images/icon-next.svg" alt="next"></div>
+                    <img src="./images/image-product-1.jpg" alt="image-product-1" class="active object-cover object-center w-full md:w-72 max-h-80 h-auto  md:rounded-xl" />
+                    <img src="./images/image-product-2.jpg" alt="image-product-2" class="object-cover object-center w-full md:w-72 max-h-80 h-auto  md:rounded-xl" />
+                    <img src="./images/image-product-3.jpg" alt="image-product-3" class="object-cover object-center w-full md:w-72 max-h-80 h-auto  md:rounded-xl" />
+                    <img src="./images/image-product-4.jpg" alt="image-product-4" class="object-cover object-center w-full md:w-72 max-h-80 h-auto  md:rounded-xl" />
                 </div>
                 <div class="hidden md:grid grid-cols-4 gap-[10px]">
                     <div data-thumbnail-container class = 'thumbnail-container active' >
-                        <img src="../images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail" class="active thumbnail-img" />
+                        <img src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail" class="active thumbnail-img" />
                     </div>
                     <div data-thumbnail-container class = 'thumbnail-container'>
-                        <img src="../images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail" class="thumbnail-img" />
+                        <img src="./images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail" class="thumbnail-img" />
                     </div>
                     <div data-thumbnail-container class = 'thumbnail-container'>
-                        <img src="../images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail" class="thumbnail-img" />
+                        <img src="./images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail" class="thumbnail-img" />
                     </div>
                     <div data-thumbnail-container class = 'thumbnail-container'>
-                        <img src="../images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail" class="thumbnail-img" />
+                        <img src="./images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail" class="thumbnail-img" />
                     </div>
                 </div>
             </div>
@@ -101,12 +100,12 @@
                 </div>
                 <div class="flex mt-6 gap-5 items-center flex-col md:flex-row select-none">
                     <div class=" flex gap-4 bg-lightGrayishBlue h-full w-full md:w-32 rounded-md justify-between p-[15px] md:p-[10px]" >
-                        <img data-minus-btn src="../images/icon-minus.svg" alt="icon-minus" class="w-2 scale-150 scale-y-[200%] object-contain cursor-pointer ">
+                        <img data-minus-btn src="./images/icon-minus.svg" alt="icon-minus" class="w-2 scale-150 scale-y-[200%] object-contain cursor-pointer ">
                         <span data-quantity class="font-bold "> 1 </span>
-                        <img data-plus-btn src="../images/icon-plus.svg" alt="icon-minus " class="w-2 scale-150 object-contain cursor-pointer">
+                        <img data-plus-btn src="./images/icon-plus.svg" alt="icon-minus " class="w-2 scale-150 object-contain cursor-pointer">
                     </div>
                     <button data-cart-btn class="flex items-center transition-all duration-700 ease-linear hover:bg-opacity-60 justify-center w-full md:w-fit bg-orange rounded-md text-center p-[18px] md:py-3 md:px-10 text-white">
-                        <img src="../images/icon-cart.svg" alt="cart" class="cart w-4 h-4 mr-3 invert ">
+                        <img src="./images/icon-cart.svg" alt="cart" class="cart w-4 h-4 mr-3 invert ">
                         <span class="font-bold text-sm">Add to cart</span>
                     </button>
                 </div>
